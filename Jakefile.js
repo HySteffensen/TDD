@@ -23,9 +23,7 @@ task("lint", function() {
 
 mocha.defineTask({
     name: 'mocha',
-    files: './test.js',
-    ui: 'tdd',
-    reporter: 'nyan'
+    files: './src/server/**/*.js'
 });
 
 function lintOptions() {
