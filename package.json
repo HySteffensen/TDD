@@ -23,5 +23,8 @@
     "jshint": "^2.9.5",
     "mocha": "^5.2.0",
     "simplebuild-jshint": "^1.3.0"
+  },
+  "dependencies": {
+    "jake-mocha": "^1.1.0"
   }
 }
