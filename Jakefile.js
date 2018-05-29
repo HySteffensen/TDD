@@ -24,7 +24,7 @@ task("lint", function() {
 mocha.defineTask({
     name: 'mocha',
     files: './src/server/**/*.js'
-});
+}, { async: true });
 
 function lintOptions() {
     return {
