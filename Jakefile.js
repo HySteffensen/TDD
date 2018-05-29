@@ -15,7 +15,7 @@ task("lint", function() {
     process.stdout.write("Linting JavaScript: ");
 
     jshint.checkFiles({
-        files: [ "Jakefile.js", "src/javascript/**/*.js" ],
+        files: [ "Jakefile.js", "./src/**/*.js", "./spikes/**/*.js" ],
         options: lintOptions(),
         globals: lintGlobals()
     }, complete, fail);
@@ -42,7 +42,9 @@ function lintOptions() {
         undef: true,
 
         node: true,
-        browser: true
+        browser: true,
+
+        esversion: 6
     };
 }
 

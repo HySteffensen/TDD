@@ -1,3 +1,5 @@
+"use strict";
+
 var http = require("http");
 
 const port = 8080;

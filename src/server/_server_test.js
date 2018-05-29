@@ -1,5 +1,8 @@
+"use strict";
+
 var assert = require("chai").assert;
 var server = require("./server");
+
 
 describe("Addition", function() {
     it("should equal", function() {
