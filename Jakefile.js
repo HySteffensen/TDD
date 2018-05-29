@@ -5,11 +5,11 @@
 var jshint = require("simplebuild-jshint");
 
 desc("Default Task");
-task("default", [ "lint" ], function() {
-    console.log("default output");
+task("default", [ "lint", "test" ], function() {
+    console.log("\n\nBUILD OK");
 });
 
-desc("Lint JavaScript code");
+desc("Lint JavaScript Code");
 task("lint", function() {
     process.stdout.write("Linting JavaScript: ");
 
@@ -19,6 +19,11 @@ task("lint", function() {
         globals: lintGlobals()
     }, complete, fail);
 }, { async: true });
+
+desc("Testing");
+task("test", [], function() {
+    console.log("Testing Javascript");
+});
 
 function lintOptions() {
     return {
